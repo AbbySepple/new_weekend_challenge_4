@@ -1,0 +1,39 @@
+.card {
+  background-color: #565656;
+  color: white;
+  padding: 1em;
+  margin: 1em;
+}
+
+/*.pic {
+  height: 250px;
+  width: auto;
+}*/
+
+body {
+  background-color: white;
+font-family: 'Lato', sans-serif
+}
+
+.jumbotron {
+  text-align:center;
+  background-color: #d7cec7;
+  color: #76323f;
+  font-family: 'Permanent Marker';
+}
+
+#inputDiv {
+  text-align: center;
+}
+
+#outputDivOne {
+  text-align: center;
+}
+
+#outputDivTwo {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
