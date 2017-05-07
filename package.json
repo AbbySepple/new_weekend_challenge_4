@@ -1,10 +1,11 @@
 {
   "name": "weekend-challenge4",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to weekend challenge 4! This weekend, you will take on the role of an application developer for a real estate company. You will be working with Data that we will be providing to you. It will be a collection called “listings”. Inside of it, you will find information for properties that are either for Rent or for Sale.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,16 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "expres": "0.0.5",
+    "express": "^4.15.2",
     "mongoose": "^4.9.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbbySepple/new_weekend_challenge_4.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AbbySepple/new_weekend_challenge_4/issues"
+  },
+  "homepage": "https://github.com/AbbySepple/new_weekend_challenge_4#readme"
 }
