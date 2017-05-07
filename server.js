@@ -6,10 +6,10 @@ var app = express();
 
 
 //connect to mongoose
-mongoose.connect('localhost:/27017/abbyrealestate');
+mongoose.connect('mongodb://localhost:/27017/realestate');
 
 //build schema
-var listingsSchema = mongoose.Schema ({
+var listingSchema = mongoose.Schema ({
   rent: Number,
   cost: Number,
   sqft: Number,
@@ -17,7 +17,7 @@ var listingsSchema = mongoose.Schema ({
 });
 
  //create globals
-var property = mongoose.model('property', listingsSchema);
+var Property = mongoose.model('Property', listingSchema);
 var port = process.env.PORT || 7394;
 
 //route
@@ -38,7 +38,7 @@ app.listen( port, function (){
 
 app.get('/property', function(req, res){
   console.log('get to property');
-  property.find().then(function(data){
+  Property.find().then(function(data){
     res.send(data);
   });//end property find
 });//end app.get
