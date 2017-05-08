@@ -28,12 +28,14 @@ font-family: 'Lato', sans-serif
 
 #outputDivOne {
   text-align: center;
+  /*border-style: solid;*/
 }
 
 #outputDivTwo {
   text-align: center;
+  /*border-style: solid;*/
 }
 
-.container {
+/*.container {
   text-align: center;
-}
+}*/

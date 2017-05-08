@@ -5,8 +5,13 @@ var bodyParser = require('body-parser');
 var app = express();
 
 
+//uses
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
 //connect to mongoose
-mongoose.connect('mongodb://localhost:/27017/realestate');
+mongoose.connect('mongodb://localhost:27017/realestate');
 
 //build schema
 var listingSchema = mongoose.Schema ({
@@ -17,8 +22,8 @@ var listingSchema = mongoose.Schema ({
 });
 
  //create globals
-var Property = mongoose.model('Property', listingSchema);
-var port = process.env.PORT || 7394;
+var Property = mongoose.model('listings', listingSchema);
+var port = process.env.PORT || 5598;
 
 //route
 app.get('/', function (req, res){
@@ -26,9 +31,6 @@ app.get('/', function (req, res){
   res.sendFile(path.resolve ('public/views/index.html'));
 });
 
-//uses
-app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: true }));
 
 //spin up server
 app.listen( port, function (){
